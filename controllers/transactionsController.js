@@ -9,7 +9,7 @@ transactionsController.get("/", (req, res) => {
 // localhost:xxxx/transactions/:index
 transactionsController.get("/:index", (req, res) => {
   const { index } = req.params;
-  const transaction = transactionsController[index];
+  const transaction = transactionsArr[index];
   if (transaction) {
     res.json(transaction);
   } else {
